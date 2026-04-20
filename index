@@ -45,7 +45,7 @@ export default function GizmoRxRedesign() {
     },
     {
       name: "Standard Care Plan",
-      price: "$20",
+      price: "$50",
       cadence: "monthly",
       features: [
         "Four support calls**",
@@ -57,7 +57,7 @@ export default function GizmoRxRedesign() {
     },
     {
       name: "Premium Plan",
-      price: "$35",
+      price: "$80",
       cadence: "monthly",
       features: [
         "Seven support calls**",
@@ -76,12 +76,11 @@ export default function GizmoRxRedesign() {
     },
     {
       name: "VIP Plan",
-      price: "$60",
-      cadence: "monthly",
+      price: "$100",
+      cadence: "yearly",
       features: [
-        "Up to 10 support calls**",
+        "Up to 15 support calls**",
         "Response within 24 hours",
-        "*Plug Club membership",
         "One annual device check-up",
       ],
       highlight: false,
