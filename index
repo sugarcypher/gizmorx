@@ -1,0 +1,366 @@
+export default function GizmoRxRedesign() {
+  const services = [
+    {
+      title: "Smart Device Consultation",
+      text:
+        "Smart Device Consulting consists of new device shopping assistance, set-up, data transfer, integration, training, upgrading, linking, troubleshooting, programming, and maintenance.",
+    },
+    {
+      title: "Account and App / Software Consulting",
+      text:
+        "Similar to device selection, Account and App/software Consulting aids in app selection, guidance, training, integration, operation, upgrades, and maintenance. We are multi-platform pan-device solution specialists. We save clients around $200 a month by updating monthly service subscription accounts.",
+    },
+    {
+      title: "Contemporary Lighting Design",
+      text:
+        "We use smartlights, LED smart bulbs, cutting edge lighting styles and technology, projectors, etc. to craft ambiance in your spaces.",
+    },
+  ];
+
+  const extendedServices = [
+    "Communication Technology Consultation & Services",
+    "Creative Consultation & Services",
+    "Cybersecurity Consultation & Services",
+    "Entertainment Technology Consultation & Services",
+    "IT Consulting & Services",
+    "Shopping Assistance",
+    "Video & Photo Editing",
+    "Videography, Photography, Drone Photography, Lidar 3d Scanning",
+    "Website Development — Webpage & website creation, customized to your needs. Includes e-commerce, blogs, galleries, stores, landing pages, backlinks, digital marketing, ad & content creation, social media integration. AI transformation specialty.",
+    "Graphic / Digital Design — The sky is the limit… logo design, digital art, posters, flyers, game layouts, schematics, resumes, templates, product designs etc.",
+  ];
+
+  const plans = [
+    {
+      name: "Intake & Assessment Consultation",
+      price: "$100",
+      cadence: "one time payment",
+      features: [
+        "share your vision",
+        "present new / old devices",
+        "decide goals",
+        "define budget",
+      ],
+      highlight: false,
+    },
+    {
+      name: "Standard Care Plan",
+      price: "$20",
+      cadence: "monthly",
+      features: [
+        "Four support calls**",
+        "Response within 72 hours",
+        "*Plug Club membership",
+        "5% discount on hourly rate",
+      ],
+      highlight: false,
+    },
+    {
+      name: "Premium Plan",
+      price: "$35",
+      cadence: "monthly",
+      features: [
+        "Seven support calls**",
+        "Response within 48 hours",
+        "*Plug Club membership",
+        "7% discount / hour",
+      ],
+      highlight: true,
+    },
+    {
+      name: "Hourly",
+      price: "$50",
+      cadence: "per hour",
+      features: ["Flexible single-session support"],
+      highlight: false,
+    },
+    {
+      name: "VIP Plan",
+      price: "$60",
+      cadence: "monthly",
+      features: [
+        "Up to 10 support calls**",
+        "Response within 24 hours",
+        "*Plug Club membership",
+        "One annual device check-up",
+      ],
+      highlight: false,
+    },
+  ];
+
+  const testimonials = [
+    {
+      quote:
+        '“A new printer + an apple iOS update left me without a working printer, feeling out of options, and with a ton of frustration. Then, like a miracle, GizmoRx showed up and did in thirty minutes what HP tech support could not do in two and a half hours. They did what my Doctor daughter couldn’t do in two hours. They accomplished what I gave up on after one hour… in thirty minutes. If you value your time, mental health, and efficient & smart solutions; I highly recommend GizmoRx!”',
+      byline: "— Lindy S (age 66), Sioux Falls, SD (Smart Tile) 04/01/2024",
+    },
+    {
+      quote:
+        '“GizmoRx saved me over two hundred dollars a month by evaluating my accounts & recommending changes in service providers. As someone on a fixed income, I was astounded what they could do! They upgraded my home sound system with new Sonos speakers they set up. Set up my stereo, smart speakers, new wifi, new TVs, and apple TVs. They removed all the old, out of date components. I was trained in the operational tactics, requirements, and capabilities of my new devices. And didn’t make a mess! So handsome and charming too!”',
+      byline: "— Mario (age 78), Palm Springs, CA 01/08/2024",
+    },
+    {
+      quote:
+        '“I was at my wits\' end trying to get all my smart home devices working properly. My stereo system was only playing through half the speakers (when it would turn on), the robot vacuum was still in the box, and the smart faucet had very low water pressure. On top of that, my HomePod, Alexa, and Google speakers all needed updates and connections, the smart thermostat wouldn\'t sync to my phone, and the new smart TV was a complicated mess. Apple TV would not work either! Even my iPad, iPhone, and their connections to my car audio were giving me issues. There were power cords and clutter everywhere - it was overwhelming! That\'s when I called GizmoRx. Within a few days, Briar had worked through every single issue systematically. The stereo tuner was repaired, and a new CD changer was installed, and calibrated for full surround sound. The robot vacuum was unboxed, set up, and running around keeping my floors tidy. The smart faucet was adjusted, unclogged, and cleaned for proper pressure. All my voice assistants were updated, linked, and connected to my TV and sound system. The thermostat was finally talking to my mobile device for easy temperature control while away from home. Briar had my smart TV entirely set up - accounts connected, settings configured perfectly for my viewing preferences. He even installed a digital antenna. Even my iPad, iPhone, and their connections to my car\'s infotainment display were straightened out. Best of all, he organized all the power cables and cleared away the clutter, leaving everything clean and tidy. He got a new power strip and velcro straps to tackle that. And, going above and beyond, helped me save money moving forward by identifying monthly charges for subscriptions I did not know I had. Helped me cancel them, and even helped me request refunds! He was also available for questions via phone afterwards. I\'m absolutely amazed at Briar’s tech skills and attention to detail. My entire smart home ecosystem is finally working as intended. I\'ll definitely be calling GizmoRx again for any future issues! Briar’s services were worth every penny; in fact, he should charge more!”',
+      byline: "— Mary Lou (age 70), Mitchell, SD 05/08/2024",
+    },
+  ];
+
+  return (
+    <div className="min-h-screen bg-stone-50 text-stone-900">
+      <header className="sticky top-0 z-40 border-b border-stone-200/80 bg-white/85 backdrop-blur">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+          <div>
+            <div className="text-2xl font-black tracking-tight">GizmoRX</div>
+            <div className="text-xs uppercase tracking-[0.24em] text-stone-500">House calls for your sick tech</div>
+          </div>
+          <nav className="hidden gap-8 text-sm font-medium md:flex">
+            <a href="#services" className="transition hover:text-stone-500">Services</a>
+            <a href="#pricing" className="transition hover:text-stone-500">Pricing</a>
+            <a href="#reviews" className="transition hover:text-stone-500">Reviews</a>
+            <a href="#about" className="transition hover:text-stone-500">About</a>
+            <a href="#contact" className="transition hover:text-stone-500">Contact</a>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section className="relative overflow-hidden border-b border-stone-200 bg-[radial-gradient(circle_at_top_left,_rgba(16,24,40,0.08),_transparent_35%),linear-gradient(135deg,_#0f172a_0%,_#102a43_28%,_#1d4d4f_58%,_#dbe7e4_100%)] text-white">
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.08)_1px,transparent_1px)] bg-[size:40px_40px] opacity-20" />
+          <div className="relative mx-auto grid max-w-7xl gap-12 px-6 py-20 lg:grid-cols-[1.15fr_0.85fr] lg:px-8 lg:py-28">
+            <div>
+              <div className="mb-5 inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-white/85">
+                Trusted in-home technology support
+              </div>
+              <h1 className="max-w-3xl text-5xl font-black leading-[0.94] tracking-tight md:text-7xl">
+                House calls for your sick tech.
+              </h1>
+              <p className="mt-6 max-w-2xl text-lg leading-8 text-white/88 md:text-xl">
+                Smart-home setup, device integration, troubleshooting, account cleanup, app guidance, and calm real-world help from a real human.
+              </p>
+              <div className="mt-8 flex flex-wrap gap-4">
+                <a
+                  href="#contact"
+                  className="rounded-2xl bg-white px-6 py-3 text-sm font-semibold text-stone-900 shadow-lg shadow-black/10 transition hover:-translate-y-0.5"
+                >
+                  Book support
+                </a>
+                <a
+                  href="#reviews"
+                  className="rounded-2xl border border-white/25 bg-white/10 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/15"
+                >
+                  Read reviews
+                </a>
+              </div>
+              <div className="mt-10 grid gap-4 sm:grid-cols-3">
+                {[
+                  "Device setup & rescue",
+                  "Smart-home integration",
+                  "Subscription & account cleanup",
+                ].map((item) => (
+                  <div key={item} className="rounded-2xl border border-white/15 bg-white/10 px-4 py-4 text-sm text-white/90 shadow-sm backdrop-blur-sm">
+                    {item}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="self-end rounded-[2rem] border border-white/15 bg-white/10 p-6 shadow-2xl shadow-black/20 backdrop-blur-md">
+              <div className="text-sm font-semibold uppercase tracking-[0.24em] text-white/70">Why GizmoRX</div>
+              <div className="mt-5 space-y-4">
+                {[
+                  {
+                    title: "Real experience",
+                    text: "In-home support built around actual devices, actual homes, actual friction points.",
+                  },
+                  {
+                    title: "Clear pricing",
+                    text: "Simple consultation, hourly, and care-plan options without call-center maze logic.",
+                  },
+                  {
+                    title: "Human translation",
+                    text: "Not outsourced script-reading; practical help that explains what changed and why.",
+                  },
+                ].map((item) => (
+                  <div key={item.title} className="rounded-2xl bg-black/15 p-5">
+                    <div className="text-base font-semibold text-white">{item.title}</div>
+                    <div className="mt-1 text-sm leading-6 text-white/80">{item.text}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-20">
+          <div className="grid gap-5 md:grid-cols-3">
+            {[
+              {
+                title: "1. Intake",
+                text: "Share the problem, the devices involved, the end goal, and whether this is rescue, setup, optimization, or all three.",
+              },
+              {
+                title: "2. Remedy",
+                text: "Get practical in-home support for broken, misbehaving, outdated, disconnected, or overwhelming tech systems.",
+              },
+              {
+                title: "3. Relief",
+                text: "Leave with working devices, cleaner systems, clearer accounts, and a better grasp of how everything fits together.",
+              },
+            ].map((item) => (
+              <div key={item.title} className="rounded-[1.75rem] border border-stone-200 bg-white p-6 shadow-sm">
+                <div className="text-sm font-semibold uppercase tracking-[0.22em] text-stone-500">{item.title}</div>
+                <p className="mt-4 text-base leading-7 text-stone-700">{item.text}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section id="services" className="border-y border-stone-200 bg-white">
+          <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-20">
+            <div className="max-w-3xl">
+              <div className="text-sm font-semibold uppercase tracking-[0.24em] text-stone-500">Services</div>
+              <h2 className="mt-3 text-4xl font-black tracking-tight md:text-5xl">The sharpest edge of the offer, first.</h2>
+              <p className="mt-5 text-lg leading-8 text-stone-700">
+                GizmoRX is strongest where homes, devices, apps, accounts, and modern digital clutter collide. The core offer stays centered on practical, in-person tech relief.
+              </p>
+            </div>
+
+            <div className="mt-12 grid gap-6 lg:grid-cols-3">
+              {services.map((service) => (
+                <div key={service.title} className="rounded-[1.75rem] border border-stone-200 bg-stone-50 p-7 shadow-sm">
+                  <h3 className="text-xl font-bold tracking-tight">{service.title}</h3>
+                  <p className="mt-4 text-[15px] leading-7 text-stone-700">{service.text}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-10 rounded-[2rem] border border-stone-200 bg-stone-50 p-7 shadow-sm">
+              <div className="text-sm font-semibold uppercase tracking-[0.24em] text-stone-500">Extended capabilities</div>
+              <div className="mt-5 grid gap-x-8 gap-y-4 md:grid-cols-2 xl:grid-cols-3">
+                {extendedServices.map((item) => (
+                  <div key={item} className="rounded-2xl border border-stone-200 bg-white px-4 py-4 text-sm leading-6 text-stone-700">
+                    {item}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="reviews" className="mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-20">
+          <div className="max-w-3xl">
+            <div className="text-sm font-semibold uppercase tracking-[0.24em] text-stone-500">Reviews</div>
+            <h2 className="mt-3 text-4xl font-black tracking-tight md:text-5xl">Actual device chaos; actual outcomes.</h2>
+          </div>
+          <div className="mt-12 space-y-6">
+            {testimonials.map((item, index) => (
+              <article key={index} className="rounded-[2rem] border border-stone-200 bg-white p-8 shadow-sm">
+                <p className="text-[16px] leading-8 text-stone-800">{item.quote}</p>
+                <div className="mt-6 text-sm font-semibold uppercase tracking-[0.18em] text-stone-500">{item.byline}</div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section id="pricing" className="border-y border-stone-200 bg-stone-100/70">
+          <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-20">
+            <div className="max-w-3xl">
+              <div className="text-sm font-semibold uppercase tracking-[0.24em] text-stone-500">Pricing</div>
+              <h2 className="mt-3 text-4xl font-black tracking-tight md:text-5xl">Clear enough to trust.</h2>
+            </div>
+            <div className="mt-12 grid gap-6 lg:grid-cols-5">
+              {plans.map((plan) => (
+                <div
+                  key={plan.name}
+                  className={`rounded-[1.75rem] border p-6 shadow-sm ${
+                    plan.highlight
+                      ? "border-stone-900 bg-stone-900 text-white"
+                      : "border-stone-200 bg-white text-stone-900"
+                  }`}
+                >
+                  <div className="text-sm font-semibold uppercase tracking-[0.18em] opacity-70">{plan.name}</div>
+                  <div className="mt-5 text-4xl font-black tracking-tight">{plan.price}</div>
+                  <div className={`mt-1 text-sm ${plan.highlight ? "text-white/75" : "text-stone-500"}`}>{plan.cadence}</div>
+                  <div className="mt-6 space-y-3 text-sm leading-6">
+                    {plan.features.map((feature) => (
+                      <div key={feature} className="flex gap-3">
+                        <span className={`mt-2 h-1.5 w-1.5 rounded-full ${plan.highlight ? "bg-white" : "bg-stone-900"}`} />
+                        <span>{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="about" className="mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-20">
+          <div className="grid gap-8 lg:grid-cols-[1fr_0.95fr]">
+            <div className="rounded-[2rem] border border-stone-200 bg-white p-8 shadow-sm">
+              <div className="text-sm font-semibold uppercase tracking-[0.24em] text-stone-500">About GizmoRX</div>
+              <h2 className="mt-3 text-4xl font-black tracking-tight md:text-5xl">Built for the modern home; grounded in practical relief.</h2>
+              <p className="mt-6 text-lg leading-8 text-stone-700">
+                At GizmoRx, we are dedicated to providing cutting-edge in-home IT solutions for individuals and teams in Palm Springs, CA. With a focus on innovation and customer satisfaction, our team of experts is committed to delivering top-notch technology services tailored to meet your specific needs. Trust GizmoRx to be your partner in navigating the complex world of contemporary technology, so you can focus on what you do best — with ease.
+              </p>
+            </div>
+            <div className="rounded-[2rem] border border-stone-200 bg-stone-900 p-8 text-white shadow-sm">
+              <div className="text-sm font-semibold uppercase tracking-[0.24em] text-white/65">Ideal for</div>
+              <div className="mt-6 grid gap-4 sm:grid-cols-2">
+                {[
+                  "Smart-home troubleshooting",
+                  "Device setup and migration",
+                  "TV / streaming / speaker integration",
+                  "App and account cleanup",
+                  "Monthly subscription optimization",
+                  "Practical digital training",
+                ].map((item) => (
+                  <div key={item} className="rounded-2xl border border-white/10 bg-white/5 px-4 py-4 text-sm text-white/85">
+                    {item}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" className="border-t border-stone-200 bg-white">
+          <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-20">
+            <div className="rounded-[2rem] border border-stone-200 bg-stone-50 p-8 shadow-sm lg:p-10">
+              <div className="grid gap-8 lg:grid-cols-[1fr_0.9fr]">
+                <div>
+                  <div className="text-sm font-semibold uppercase tracking-[0.24em] text-stone-500">Contact</div>
+                  <h2 className="mt-3 text-4xl font-black tracking-tight md:text-5xl">Get the remedy started.</h2>
+                  <p className="mt-5 max-w-2xl text-lg leading-8 text-stone-700">
+                    Share the issue, the devices involved, and whether you want an in-home visit, setup help, or a system-wide cleanup.
+                  </p>
+                </div>
+                <div className="rounded-[1.75rem] border border-stone-200 bg-white p-6">
+                  <div className="space-y-4 text-sm leading-7 text-stone-700">
+                    <div>
+                      <div className="text-xs font-semibold uppercase tracking-[0.22em] text-stone-500">Call</div>
+                      <div className="mt-1 text-lg font-semibold text-stone-900">+1-424-777-3476</div>
+                    </div>
+                    <div>
+                      <div className="text-xs font-semibold uppercase tracking-[0.22em] text-stone-500">Email</div>
+                      <div className="mt-1 text-lg font-semibold text-stone-900">gizmorxps@outlook.com</div>
+                    </div>
+                    <div>
+                      <div className="text-xs font-semibold uppercase tracking-[0.22em] text-stone-500">Location</div>
+                      <div className="mt-1 text-lg font-semibold text-stone-900">Palm Springs</div>
+                    </div>
+                    <div>
+                      <div className="text-xs font-semibold uppercase tracking-[0.22em] text-stone-500">Hours</div>
+                      <div className="mt-1 text-lg font-semibold text-stone-900">7 days a week</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  );
+}
