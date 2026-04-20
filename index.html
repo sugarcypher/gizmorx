@@ -1,365 +1,824 @@
-export default function GizmoRxRedesign() {
-  const services = [
-    {
-      title: "Smart Device Consultation",
-      text:
-        "Smart Device Consulting consists of new device shopping assistance, set-up, data transfer, integration, training, upgrading, linking, troubleshooting, programming, and maintenance.",
-    },
-    {
-      title: "Account and App / Software Consulting",
-      text:
-        "Similar to device selection, Account and App/software Consulting aids in app selection, guidance, training, integration, operation, upgrades, and maintenance. We are multi-platform pan-device solution specialists. We save clients around $200 a month by updating monthly service subscription accounts.",
-    },
-    {
-      title: "Contemporary Lighting Design",
-      text:
-        "We use smartlights, LED smart bulbs, cutting edge lighting styles and technology, projectors, etc. to craft ambiance in your spaces.",
-    },
-  ];
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GizmoRX — House calls for your sick tech</title>
+  <meta name="description" content="Smart-home setup, device integration, troubleshooting, account cleanup, app guidance, and calm real-world help from a real human." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,900;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  const extendedServices = [
-    "Communication Technology Consultation & Services",
-    "Creative Consultation & Services",
-    "Cybersecurity Consultation & Services",
-    "Entertainment Technology Consultation & Services",
-    "IT Consulting & Services",
-    "Shopping Assistance",
-    "Video & Photo Editing",
-    "Videography, Photography, Drone Photography, Lidar 3d Scanning",
-    "Website Development — Webpage & website creation, customized to your needs. Includes e-commerce, blogs, galleries, stores, landing pages, backlinks, digital marketing, ad & content creation, social media integration. AI transformation specialty.",
-    "Graphic / Digital Design — The sky is the limit… logo design, digital art, posters, flyers, game layouts, schematics, resumes, templates, product designs etc.",
-  ];
+    :root {
+      --stone-50:  #fafaf9;
+      --stone-100: #f5f5f4;
+      --stone-200: #e7e5e4;
+      --stone-300: #d6d3d1;
+      --stone-400: #a8a29e;
+      --stone-500: #78716c;
+      --stone-600: #57534e;
+      --stone-700: #44403c;
+      --stone-800: #292524;
+      --stone-900: #1c1917;
+      --white: #ffffff;
+      --radius-card: 1.75rem;
+      --radius-large: 2rem;
+      --radius-pill: 9999px;
+    }
 
-  const plans = [
-    {
-      name: "Intake & Assessment Consultation",
-      price: "$100",
-      cadence: "one time payment",
-      features: [
-        "share your vision",
-        "present new / old devices",
-        "decide goals",
-        "define budget",
-      ],
-      highlight: false,
-    },
-    {
-      name: "Standard Care Plan",
-      price: "$50",
-      cadence: "monthly",
-      features: [
-        "Four support calls**",
-        "Response within 72 hours",
-        "*Plug Club membership",
-        "5% discount on hourly rate",
-      ],
-      highlight: false,
-    },
-    {
-      name: "Premium Plan",
-      price: "$80",
-      cadence: "monthly",
-      features: [
-        "Seven support calls**",
-        "Response within 48 hours",
-        "*Plug Club membership",
-        "7% discount / hour",
-      ],
-      highlight: true,
-    },
-    {
-      name: "Hourly",
-      price: "$50",
-      cadence: "per hour",
-      features: ["Flexible single-session support"],
-      highlight: false,
-    },
-    {
-      name: "VIP Plan",
-      price: "$100",
-      cadence: "yearly",
-      features: [
-        "Up to 15 support calls**",
-        "Response within 24 hours",
-        "One annual device check-up",
-      ],
-      highlight: false,
-    },
-  ];
+    html { scroll-behavior: smooth; }
 
-  const testimonials = [
-    {
-      quote:
-        '“A new printer + an apple iOS update left me without a working printer, feeling out of options, and with a ton of frustration. Then, like a miracle, GizmoRx showed up and did in thirty minutes what HP tech support could not do in two and a half hours. They did what my Doctor daughter couldn’t do in two hours. They accomplished what I gave up on after one hour… in thirty minutes. If you value your time, mental health, and efficient & smart solutions; I highly recommend GizmoRx!”',
-      byline: "— Lindy S (age 66), Sioux Falls, SD (Smart Tile) 04/01/2024",
-    },
-    {
-      quote:
-        '“GizmoRx saved me over two hundred dollars a month by evaluating my accounts & recommending changes in service providers. As someone on a fixed income, I was astounded what they could do! They upgraded my home sound system with new Sonos speakers they set up. Set up my stereo, smart speakers, new wifi, new TVs, and apple TVs. They removed all the old, out of date components. I was trained in the operational tactics, requirements, and capabilities of my new devices. And didn’t make a mess! So handsome and charming too!”',
-      byline: "— Mario (age 78), Palm Springs, CA 01/08/2024",
-    },
-    {
-      quote:
-        '“I was at my wits\' end trying to get all my smart home devices working properly. My stereo system was only playing through half the speakers (when it would turn on), the robot vacuum was still in the box, and the smart faucet had very low water pressure. On top of that, my HomePod, Alexa, and Google speakers all needed updates and connections, the smart thermostat wouldn\'t sync to my phone, and the new smart TV was a complicated mess. Apple TV would not work either! Even my iPad, iPhone, and their connections to my car audio were giving me issues. There were power cords and clutter everywhere - it was overwhelming! That\'s when I called GizmoRx. Within a few days, Briar had worked through every single issue systematically. The stereo tuner was repaired, and a new CD changer was installed, and calibrated for full surround sound. The robot vacuum was unboxed, set up, and running around keeping my floors tidy. The smart faucet was adjusted, unclogged, and cleaned for proper pressure. All my voice assistants were updated, linked, and connected to my TV and sound system. The thermostat was finally talking to my mobile device for easy temperature control while away from home. Briar had my smart TV entirely set up - accounts connected, settings configured perfectly for my viewing preferences. He even installed a digital antenna. Even my iPad, iPhone, and their connections to my car\'s infotainment display were straightened out. Best of all, he organized all the power cables and cleared away the clutter, leaving everything clean and tidy. He got a new power strip and velcro straps to tackle that. And, going above and beyond, helped me save money moving forward by identifying monthly charges for subscriptions I did not know I had. Helped me cancel them, and even helped me request refunds! He was also available for questions via phone afterwards. I\'m absolutely amazed at Briar’s tech skills and attention to detail. My entire smart home ecosystem is finally working as intended. I\'ll definitely be calling GizmoRx again for any future issues! Briar’s services were worth every penny; in fact, he should charge more!”',
-      byline: "— Mary Lou (age 70), Mitchell, SD 05/08/2024",
-    },
-  ];
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--stone-50);
+      color: var(--stone-900);
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
 
-  return (
-    <div className="min-h-screen bg-stone-50 text-stone-900">
-      <header className="sticky top-0 z-40 border-b border-stone-200/80 bg-white/85 backdrop-blur">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
-          <div>
-            <div className="text-2xl font-black tracking-tight">GizmoRX</div>
-            <div className="text-xs uppercase tracking-[0.24em] text-stone-500">House calls for your sick tech</div>
-          </div>
-          <nav className="hidden gap-8 text-sm font-medium md:flex">
-            <a href="#services" className="transition hover:text-stone-500">Services</a>
-            <a href="#pricing" className="transition hover:text-stone-500">Pricing</a>
-            <a href="#reviews" className="transition hover:text-stone-500">Reviews</a>
-            <a href="#about" className="transition hover:text-stone-500">About</a>
-            <a href="#contact" className="transition hover:text-stone-500">Contact</a>
-          </nav>
-        </div>
-      </header>
+    /* ── HEADER ── */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      border-bottom: 1px solid rgba(231,229,228,0.8);
+      background: rgba(255,255,255,0.88);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .header-inner {
+      max-width: 80rem;
+      margin: 0 auto;
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo-name {
+      font-size: 1.5rem;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      line-height: 1;
+    }
+    .logo-tag {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.24em;
+      color: var(--stone-500);
+      margin-top: 2px;
+    }
+    nav { display: flex; gap: 2rem; }
+    nav a {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--stone-900);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    nav a:hover { color: var(--stone-500); }
+    .nav-mobile { display: none; }
 
-      <main>
-        <section className="relative overflow-hidden border-b border-stone-200 bg-[radial-gradient(circle_at_top_left,_rgba(16,24,40,0.08),_transparent_35%),linear-gradient(135deg,_#0f172a_0%,_#102a43_28%,_#1d4d4f_58%,_#dbe7e4_100%)] text-white">
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.08)_1px,transparent_1px)] bg-[size:40px_40px] opacity-20" />
-          <div className="relative mx-auto grid max-w-7xl gap-12 px-6 py-20 lg:grid-cols-[1.15fr_0.85fr] lg:px-8 lg:py-28">
-            <div>
-              <div className="mb-5 inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-white/85">
-                Trusted in-home technology support
-              </div>
-              <h1 className="max-w-3xl text-5xl font-black leading-[0.94] tracking-tight md:text-7xl">
-                House calls for your sick tech.
-              </h1>
-              <p className="mt-6 max-w-2xl text-lg leading-8 text-white/88 md:text-xl">
-                Smart-home setup, device integration, troubleshooting, account cleanup, app guidance, and calm real-world help from a real human.
-              </p>
-              <div className="mt-8 flex flex-wrap gap-4">
-                <a
-                  href="#contact"
-                  className="rounded-2xl bg-white px-6 py-3 text-sm font-semibold text-stone-900 shadow-lg shadow-black/10 transition hover:-translate-y-0.5"
-                >
-                  Book support
-                </a>
-                <a
-                  href="#reviews"
-                  className="rounded-2xl border border-white/25 bg-white/10 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/15"
-                >
-                  Read reviews
-                </a>
-              </div>
-              <div className="mt-10 grid gap-4 sm:grid-cols-3">
-                {[
-                  "Device setup & rescue",
-                  "Smart-home integration",
-                  "Subscription & account cleanup",
-                ].map((item) => (
-                  <div key={item} className="rounded-2xl border border-white/15 bg-white/10 px-4 py-4 text-sm text-white/90 shadow-sm backdrop-blur-sm">
-                    {item}
-                  </div>
-                ))}
-              </div>
-            </div>
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid var(--stone-200);
+      background:
+        radial-gradient(circle at top left, rgba(16,24,40,0.10) 0%, transparent 35%),
+        linear-gradient(135deg, #0f172a 0%, #102a43 28%, #1d4d4f 58%, #dbe7e4 100%);
+      color: var(--white);
+    }
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(to right, rgba(255,255,255,0.07) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255,255,255,0.07) 1px, transparent 1px);
+      background-size: 40px 40px;
+      opacity: 0.2;
+      pointer-events: none;
+    }
+    .hero-inner {
+      position: relative;
+      max-width: 80rem;
+      margin: 0 auto;
+      padding: 5rem 1.5rem;
+      display: grid;
+      gap: 3rem;
+    }
+    .hero-badge {
+      display: inline-flex;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(255,255,255,0.20);
+      background: rgba(255,255,255,0.10);
+      padding: 0.5rem 1rem;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.24em;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 1.25rem;
+    }
+    .hero h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(3rem, 8vw, 5.5rem);
+      font-weight: 400;
+      line-height: 0.96;
+      letter-spacing: -0.02em;
+      max-width: 22ch;
+    }
+    .hero-sub {
+      margin-top: 1.5rem;
+      font-size: 1.125rem;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.88);
+      max-width: 52ch;
+    }
+    .hero-ctas {
+      margin-top: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .btn-primary {
+      display: inline-block;
+      border-radius: var(--radius-card);
+      background: var(--white);
+      color: var(--stone-900);
+      padding: 0.75rem 1.5rem;
+      font-size: 0.875rem;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+      transition: transform 0.15s;
+    }
+    .btn-primary:hover { transform: translateY(-2px); }
+    .btn-ghost {
+      display: inline-block;
+      border-radius: var(--radius-card);
+      border: 1px solid rgba(255,255,255,0.25);
+      background: rgba(255,255,255,0.10);
+      color: var(--white);
+      padding: 0.75rem 1.5rem;
+      font-size: 0.875rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+    .btn-ghost:hover { background: rgba(255,255,255,0.18); }
+    .hero-pills {
+      margin-top: 2.5rem;
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    }
+    .hero-pill {
+      border-radius: var(--radius-card);
+      border: 1px solid rgba(255,255,255,0.15);
+      background: rgba(255,255,255,0.10);
+      padding: 1rem;
+      font-size: 0.875rem;
+      color: rgba(255,255,255,0.90);
+      backdrop-filter: blur(8px);
+    }
 
-            <div className="self-end rounded-[2rem] border border-white/15 bg-white/10 p-6 shadow-2xl shadow-black/20 backdrop-blur-md">
-              <div className="text-sm font-semibold uppercase tracking-[0.24em] text-white/70">Why GizmoRX</div>
-              <div className="mt-5 space-y-4">
-                {[
-                  {
-                    title: "Real experience",
-                    text: "In-home support built around actual devices, actual homes, actual friction points.",
-                  },
-                  {
-                    title: "Clear pricing",
-                    text: "Simple consultation, hourly, and care-plan options without call-center maze logic.",
-                  },
-                  {
-                    title: "Human translation",
-                    text: "Not outsourced script-reading; practical help that explains what changed and why.",
-                  },
-                ].map((item) => (
-                  <div key={item.title} className="rounded-2xl bg-black/15 p-5">
-                    <div className="text-base font-semibold text-white">{item.title}</div>
-                    <div className="mt-1 text-sm leading-6 text-white/80">{item.text}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
+    .hero-side {
+      border-radius: var(--radius-large);
+      border: 1px solid rgba(255,255,255,0.15);
+      background: rgba(255,255,255,0.10);
+      padding: 1.5rem;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.22);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      align-self: end;
+    }
+    .hero-side-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.24em;
+      color: rgba(255,255,255,0.70);
+    }
+    .why-cards { margin-top: 1.25rem; display: flex; flex-direction: column; gap: 1rem; }
+    .why-card {
+      border-radius: var(--radius-card);
+      background: rgba(0,0,0,0.15);
+      padding: 1.25rem;
+    }
+    .why-card-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--white);
+    }
+    .why-card-text {
+      margin-top: 0.25rem;
+      font-size: 0.875rem;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.80);
+    }
 
-        <section className="mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-20">
-          <div className="grid gap-5 md:grid-cols-3">
-            {[
-              {
-                title: "1. Intake",
-                text: "Share the problem, the devices involved, the end goal, and whether this is rescue, setup, optimization, or all three.",
-              },
-              {
-                title: "2. Remedy",
-                text: "Get practical in-home support for broken, misbehaving, outdated, disconnected, or overwhelming tech systems.",
-              },
-              {
-                title: "3. Relief",
-                text: "Leave with working devices, cleaner systems, clearer accounts, and a better grasp of how everything fits together.",
-              },
-            ].map((item) => (
-              <div key={item.title} className="rounded-[1.75rem] border border-stone-200 bg-white p-6 shadow-sm">
-                <div className="text-sm font-semibold uppercase tracking-[0.22em] text-stone-500">{item.title}</div>
-                <p className="mt-4 text-base leading-7 text-stone-700">{item.text}</p>
-              </div>
-            ))}
-          </div>
-        </section>
+    /* ── PROCESS STRIP ── */
+    .process {
+      max-width: 80rem;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+    }
+    .process-grid {
+      display: grid;
+      gap: 1.25rem;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+    .process-card {
+      border-radius: var(--radius-card);
+      border: 1px solid var(--stone-200);
+      background: var(--white);
+      padding: 1.5rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    }
+    .process-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      color: var(--stone-500);
+    }
+    .process-text {
+      margin-top: 1rem;
+      font-size: 0.9375rem;
+      line-height: 1.7;
+      color: var(--stone-700);
+    }
 
-        <section id="services" className="border-y border-stone-200 bg-white">
-          <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-20">
-            <div className="max-w-3xl">
-              <div className="text-sm font-semibold uppercase tracking-[0.24em] text-stone-500">Services</div>
-              <h2 className="mt-3 text-4xl font-black tracking-tight md:text-5xl">The sharpest edge of the offer, first.</h2>
-              <p className="mt-5 text-lg leading-8 text-stone-700">
-                GizmoRX is strongest where homes, devices, apps, accounts, and modern digital clutter collide. The core offer stays centered on practical, in-person tech relief.
-              </p>
-            </div>
+    /* ── SECTION SHARED ── */
+    .section-inner {
+      max-width: 80rem;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+    }
+    .section-kicker {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.24em;
+      color: var(--stone-500);
+    }
+    .section-h2 {
+      margin-top: 0.75rem;
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2rem, 5vw, 3.25rem);
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 1.08;
+    }
+    .section-lead {
+      margin-top: 1.25rem;
+      font-size: 1.0625rem;
+      line-height: 1.75;
+      color: var(--stone-700);
+      max-width: 60ch;
+    }
 
-            <div className="mt-12 grid gap-6 lg:grid-cols-3">
-              {services.map((service) => (
-                <div key={service.title} className="rounded-[1.75rem] border border-stone-200 bg-stone-50 p-7 shadow-sm">
-                  <h3 className="text-xl font-bold tracking-tight">{service.title}</h3>
-                  <p className="mt-4 text-[15px] leading-7 text-stone-700">{service.text}</p>
-                </div>
-              ))}
-            </div>
+    /* ── SERVICES ── */
+    #services { border-top: 1px solid var(--stone-200); border-bottom: 1px solid var(--stone-200); background: var(--white); }
+    .services-grid {
+      margin-top: 3rem;
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+    .service-card {
+      border-radius: var(--radius-card);
+      border: 1px solid var(--stone-200);
+      background: var(--stone-50);
+      padding: 1.75rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    }
+    .service-card h3 {
+      font-size: 1.125rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+    .service-card p {
+      margin-top: 1rem;
+      font-size: 0.9375rem;
+      line-height: 1.75;
+      color: var(--stone-700);
+    }
+    .extended-wrap {
+      margin-top: 2.5rem;
+      border-radius: var(--radius-large);
+      border: 1px solid var(--stone-200);
+      background: var(--stone-50);
+      padding: 1.75rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    }
+    .extended-grid {
+      margin-top: 1.25rem;
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    }
+    .extended-item {
+      border-radius: var(--radius-card);
+      border: 1px solid var(--stone-200);
+      background: var(--white);
+      padding: 1rem;
+      font-size: 0.875rem;
+      line-height: 1.6;
+      color: var(--stone-700);
+    }
 
-            <div className="mt-10 rounded-[2rem] border border-stone-200 bg-stone-50 p-7 shadow-sm">
-              <div className="text-sm font-semibold uppercase tracking-[0.24em] text-stone-500">Extended capabilities</div>
-              <div className="mt-5 grid gap-x-8 gap-y-4 md:grid-cols-2 xl:grid-cols-3">
-                {extendedServices.map((item) => (
-                  <div key={item} className="rounded-2xl border border-stone-200 bg-white px-4 py-4 text-sm leading-6 text-stone-700">
-                    {item}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
+    /* ── REVIEWS ── */
+    .reviews-list { margin-top: 3rem; display: flex; flex-direction: column; gap: 1.5rem; }
+    .review-card {
+      border-radius: var(--radius-large);
+      border: 1px solid var(--stone-200);
+      background: var(--white);
+      padding: 2rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    }
+    .review-quote {
+      font-size: 1rem;
+      line-height: 1.85;
+      color: var(--stone-800);
+    }
+    .review-byline {
+      margin-top: 1.5rem;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--stone-500);
+    }
 
-        <section id="reviews" className="mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-20">
-          <div className="max-w-3xl">
-            <div className="text-sm font-semibold uppercase tracking-[0.24em] text-stone-500">Reviews</div>
-            <h2 className="mt-3 text-4xl font-black tracking-tight md:text-5xl">Actual device chaos; actual outcomes.</h2>
-          </div>
-          <div className="mt-12 space-y-6">
-            {testimonials.map((item, index) => (
-              <article key={index} className="rounded-[2rem] border border-stone-200 bg-white p-8 shadow-sm">
-                <p className="text-[16px] leading-8 text-stone-800">{item.quote}</p>
-                <div className="mt-6 text-sm font-semibold uppercase tracking-[0.18em] text-stone-500">{item.byline}</div>
-              </article>
-            ))}
-          </div>
-        </section>
+    /* ── PRICING ── */
+    #pricing { border-top: 1px solid var(--stone-200); border-bottom: 1px solid var(--stone-200); background: rgba(245,245,244,0.7); }
+    .plans-grid {
+      margin-top: 3rem;
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    .plan-card {
+      border-radius: var(--radius-card);
+      border: 1px solid var(--stone-200);
+      background: var(--white);
+      color: var(--stone-900);
+      padding: 1.5rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    }
+    .plan-card.highlight {
+      border-color: var(--stone-900);
+      background: var(--stone-900);
+      color: var(--white);
+    }
+    .plan-name {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      opacity: 0.70;
+    }
+    .plan-price {
+      margin-top: 1.25rem;
+      font-family: 'DM Serif Display', serif;
+      font-size: 2.75rem;
+      line-height: 1;
+      letter-spacing: -0.02em;
+    }
+    .plan-cadence {
+      margin-top: 0.25rem;
+      font-size: 0.875rem;
+      color: var(--stone-500);
+    }
+    .plan-card.highlight .plan-cadence { color: rgba(255,255,255,0.70); }
+    .plan-features {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      font-size: 0.875rem;
+      line-height: 1.6;
+    }
+    .plan-feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+    .plan-dot {
+      flex-shrink: 0;
+      margin-top: 0.55rem;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--stone-900);
+    }
+    .plan-card.highlight .plan-dot { background: var(--white); }
 
-        <section id="pricing" className="border-y border-stone-200 bg-stone-100/70">
-          <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-20">
-            <div className="max-w-3xl">
-              <div className="text-sm font-semibold uppercase tracking-[0.24em] text-stone-500">Pricing</div>
-              <h2 className="mt-3 text-4xl font-black tracking-tight md:text-5xl">Clear enough to trust.</h2>
-            </div>
-            <div className="mt-12 grid gap-6 lg:grid-cols-5">
-              {plans.map((plan) => (
-                <div
-                  key={plan.name}
-                  className={`rounded-[1.75rem] border p-6 shadow-sm ${
-                    plan.highlight
-                      ? "border-stone-900 bg-stone-900 text-white"
-                      : "border-stone-200 bg-white text-stone-900"
-                  }`}
-                >
-                  <div className="text-sm font-semibold uppercase tracking-[0.18em] opacity-70">{plan.name}</div>
-                  <div className="mt-5 text-4xl font-black tracking-tight">{plan.price}</div>
-                  <div className={`mt-1 text-sm ${plan.highlight ? "text-white/75" : "text-stone-500"}`}>{plan.cadence}</div>
-                  <div className="mt-6 space-y-3 text-sm leading-6">
-                    {plan.features.map((feature) => (
-                      <div key={feature} className="flex gap-3">
-                        <span className={`mt-2 h-1.5 w-1.5 rounded-full ${plan.highlight ? "bg-white" : "bg-stone-900"}`} />
-                        <span>{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+    /* ── ABOUT ── */
+    .about-grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    .about-card {
+      border-radius: var(--radius-large);
+      border: 1px solid var(--stone-200);
+      background: var(--white);
+      padding: 2rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    }
+    .about-card p {
+      margin-top: 1.5rem;
+      font-size: 1.0625rem;
+      line-height: 1.8;
+      color: var(--stone-700);
+    }
+    .ideal-card {
+      border-radius: var(--radius-large);
+      border: 1px solid var(--stone-200);
+      background: var(--stone-900);
+      padding: 2rem;
+      color: var(--white);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    }
+    .ideal-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.24em;
+      color: rgba(255,255,255,0.60);
+    }
+    .ideal-grid {
+      margin-top: 1.5rem;
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+    .ideal-item {
+      border-radius: var(--radius-card);
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.05);
+      padding: 1rem;
+      font-size: 0.875rem;
+      color: rgba(255,255,255,0.85);
+    }
 
-        <section id="about" className="mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-20">
-          <div className="grid gap-8 lg:grid-cols-[1fr_0.95fr]">
-            <div className="rounded-[2rem] border border-stone-200 bg-white p-8 shadow-sm">
-              <div className="text-sm font-semibold uppercase tracking-[0.24em] text-stone-500">About GizmoRX</div>
-              <h2 className="mt-3 text-4xl font-black tracking-tight md:text-5xl">Built for the modern home; grounded in practical relief.</h2>
-              <p className="mt-6 text-lg leading-8 text-stone-700">
-                At GizmoRx, we are dedicated to providing cutting-edge in-home IT solutions for individuals and teams in Palm Springs, CA. With a focus on innovation and customer satisfaction, our team of experts is committed to delivering top-notch technology services tailored to meet your specific needs. Trust GizmoRx to be your partner in navigating the complex world of contemporary technology, so you can focus on what you do best — with ease.
-              </p>
-            </div>
-            <div className="rounded-[2rem] border border-stone-200 bg-stone-900 p-8 text-white shadow-sm">
-              <div className="text-sm font-semibold uppercase tracking-[0.24em] text-white/65">Ideal for</div>
-              <div className="mt-6 grid gap-4 sm:grid-cols-2">
-                {[
-                  "Smart-home troubleshooting",
-                  "Device setup and migration",
-                  "TV / streaming / speaker integration",
-                  "App and account cleanup",
-                  "Monthly subscription optimization",
-                  "Practical digital training",
-                ].map((item) => (
-                  <div key={item} className="rounded-2xl border border-white/10 bg-white/5 px-4 py-4 text-sm text-white/85">
-                    {item}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
+    /* ── CONTACT ── */
+    #contact { border-top: 1px solid var(--stone-200); background: var(--white); }
+    .contact-wrap {
+      border-radius: var(--radius-large);
+      border: 1px solid var(--stone-200);
+      background: var(--stone-50);
+      padding: 2rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    }
+    .contact-grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+    .contact-info-card {
+      border-radius: var(--radius-card);
+      border: 1px solid var(--stone-200);
+      background: var(--white);
+      padding: 1.5rem;
+    }
+    .contact-info-card .row { margin-bottom: 1.25rem; }
+    .contact-info-card .row:last-child { margin-bottom: 0; }
+    .ci-label {
+      font-size: 0.65rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      color: var(--stone-500);
+    }
+    .ci-value {
+      margin-top: 0.2rem;
+      font-size: 1.0625rem;
+      font-weight: 700;
+      color: var(--stone-900);
+    }
+    .contact-text {
+      margin-top: 1.25rem;
+      font-size: 1.0625rem;
+      line-height: 1.75;
+      color: var(--stone-700);
+      max-width: 48ch;
+    }
 
-        <section id="contact" className="border-t border-stone-200 bg-white">
-          <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-20">
-            <div className="rounded-[2rem] border border-stone-200 bg-stone-50 p-8 shadow-sm lg:p-10">
-              <div className="grid gap-8 lg:grid-cols-[1fr_0.9fr]">
-                <div>
-                  <div className="text-sm font-semibold uppercase tracking-[0.24em] text-stone-500">Contact</div>
-                  <h2 className="mt-3 text-4xl font-black tracking-tight md:text-5xl">Get the remedy started.</h2>
-                  <p className="mt-5 max-w-2xl text-lg leading-8 text-stone-700">
-                    Share the issue, the devices involved, and whether you want an in-home visit, setup help, or a system-wide cleanup.
-                  </p>
-                </div>
-                <div className="rounded-[1.75rem] border border-stone-200 bg-white p-6">
-                  <div className="space-y-4 text-sm leading-7 text-stone-700">
-                    <div>
-                      <div className="text-xs font-semibold uppercase tracking-[0.22em] text-stone-500">Call</div>
-                      <div className="mt-1 text-lg font-semibold text-stone-900">+1-424-777-3476</div>
-                    </div>
-                    <div>
-                      <div className="text-xs font-semibold uppercase tracking-[0.22em] text-stone-500">Email</div>
-                      <div className="mt-1 text-lg font-semibold text-stone-900">gizmorxps@outlook.com</div>
-                    </div>
-                    <div>
-                      <div className="text-xs font-semibold uppercase tracking-[0.22em] text-stone-500">Location</div>
-                      <div className="mt-1 text-lg font-semibold text-stone-900">Palm Springs</div>
-                    </div>
-                    <div>
-                      <div className="text-xs font-semibold uppercase tracking-[0.22em] text-stone-500">Hours</div>
-                      <div className="mt-1 text-lg font-semibold text-stone-900">7 days a week</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
+    /* ── RESPONSIVE ── */
+    @media (min-width: 1024px) {
+      .header-inner { padding: 1rem 2rem; }
+      .hero-inner {
+        grid-template-columns: 1.15fr 0.85fr;
+        padding: 7rem 2rem;
+        align-items: start;
+      }
+      .section-inner { padding: 5rem 2rem; }
+      .contact-wrap { padding: 2.5rem; }
+    }
+    @media (max-width: 767px) {
+      nav { display: none; }
+      .nav-mobile {
+        display: flex;
+        gap: 1.25rem;
+        flex-wrap: wrap;
+        margin-top: 0.5rem;
+      }
+      .nav-mobile a {
+        font-size: 0.8rem;
+        font-weight: 500;
+        color: var(--stone-700);
+        text-decoration: none;
+      }
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--stone-200);
+      background: var(--stone-900);
+      color: rgba(255,255,255,0.55);
+      text-align: center;
+      padding: 2rem 1.5rem;
+      font-size: 0.8125rem;
+    }
+    footer strong { color: rgba(255,255,255,0.85); }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <div>
+      <div class="logo-name">GizmoRX</div>
+      <div class="logo-tag">House calls for your sick tech</div>
     </div>
-  );
-}
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+  <div class="nav-mobile" style="padding: 0 1.5rem 0.75rem;">
+    <a href="#services">Services</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge">Trusted in-home technology support</div>
+      <h1>House calls for your sick tech.</h1>
+      <p class="hero-sub">Smart-home setup, device integration, troubleshooting, account cleanup, app guidance, and calm real-world help from a real human.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn-primary">Book support</a>
+        <a href="#reviews" class="btn-ghost">Read reviews</a>
+      </div>
+      <div class="hero-pills">
+        <div class="hero-pill">Device setup &amp; rescue</div>
+        <div class="hero-pill">Smart-home integration</div>
+        <div class="hero-pill">Subscription &amp; account cleanup</div>
+      </div>
+    </div>
+    <div class="hero-side">
+      <div class="hero-side-label">Why GizmoRX</div>
+      <div class="why-cards">
+        <div class="why-card">
+          <div class="why-card-title">Real experience</div>
+          <div class="why-card-text">In-home support built around actual devices, actual homes, actual friction points.</div>
+        </div>
+        <div class="why-card">
+          <div class="why-card-title">Clear pricing</div>
+          <div class="why-card-text">Simple consultation, hourly, and care-plan options without call-center maze logic.</div>
+        </div>
+        <div class="why-card">
+          <div class="why-card-title">Human translation</div>
+          <div class="why-card-text">Not outsourced script-reading; practical help that explains what changed and why.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<div class="process">
+  <div class="process-grid">
+    <div class="process-card">
+      <div class="process-label">1. Intake</div>
+      <p class="process-text">Share the problem, the devices involved, the end goal, and whether this is rescue, setup, optimization, or all three.</p>
+    </div>
+    <div class="process-card">
+      <div class="process-label">2. Remedy</div>
+      <p class="process-text">Get practical in-home support for broken, misbehaving, outdated, disconnected, or overwhelming tech systems.</p>
+    </div>
+    <div class="process-card">
+      <div class="process-label">3. Relief</div>
+      <p class="process-text">Leave with working devices, cleaner systems, clearer accounts, and a better grasp of how everything fits together.</p>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-inner">
+    <div class="section-kicker">Services</div>
+    <h2 class="section-h2">The sharpest edge of the offer, first.</h2>
+    <p class="section-lead">GizmoRX is strongest where homes, devices, apps, accounts, and modern digital clutter collide. The core offer stays centered on practical, in-person tech relief.</p>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>Smart Device Consultation</h3>
+        <p>Smart Device Consulting consists of new device shopping assistance, set-up, data transfer, integration, training, upgrading, linking, troubleshooting, programming, and maintenance.</p>
+      </div>
+      <div class="service-card">
+        <h3>Account and App / Software Consulting</h3>
+        <p>Similar to device selection, Account and App/software Consulting aids in app selection, guidance, training, integration, operation, upgrades, and maintenance. We are multi-platform pan-device solution specialists. We save clients around $200 a month by updating monthly service subscription accounts.</p>
+      </div>
+      <div class="service-card">
+        <h3>Contemporary Lighting Design</h3>
+        <p>We use smartlights, LED smart bulbs, cutting edge lighting styles and technology, projectors, etc. to craft ambiance in your spaces.</p>
+      </div>
+    </div>
+
+    <div class="extended-wrap">
+      <div class="section-kicker">Extended capabilities</div>
+      <div class="extended-grid">
+        <div class="extended-item">Communication Technology Consultation &amp; Services</div>
+        <div class="extended-item">Creative Consultation &amp; Services</div>
+        <div class="extended-item">Cybersecurity Consultation &amp; Services</div>
+        <div class="extended-item">Entertainment Technology Consultation &amp; Services</div>
+        <div class="extended-item">IT Consulting &amp; Services</div>
+        <div class="extended-item">Shopping Assistance</div>
+        <div class="extended-item">Video &amp; Photo Editing</div>
+        <div class="extended-item">Videography, Photography, Drone Photography, Lidar 3d Scanning</div>
+        <div class="extended-item">Website Development — Webpage &amp; website creation, customized to your needs. Includes e-commerce, blogs, galleries, stores, landing pages, backlinks, digital marketing, ad &amp; content creation, social media integration. AI transformation specialty.</div>
+        <div class="extended-item">Graphic / Digital Design — The sky is the limit… logo design, digital art, posters, flyers, game layouts, schematics, resumes, templates, product designs etc.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews">
+  <div class="section-inner">
+    <div class="section-kicker">Reviews</div>
+    <h2 class="section-h2">Actual device chaos; actual outcomes.</h2>
+    <div class="reviews-list">
+      <article class="review-card">
+        <p class="review-quote">"A new printer + an apple iOS update left me without a working printer, feeling out of options, and with a ton of frustration. Then, like a miracle, GizmoRx showed up and did in thirty minutes what HP tech support could not do in two and a half hours. They did what my Doctor daughter couldn't do in two hours. They accomplished what I gave up on after one hour… in thirty minutes. If you value your time, mental health, and efficient &amp; smart solutions; I highly recommend GizmoRx!"</p>
+        <div class="review-byline">— Lindy S (age 66), Sioux Falls, SD (Smart Tile) 04/01/2024</div>
+      </article>
+      <article class="review-card">
+        <p class="review-quote">"GizmoRx saved me over two hundred dollars a month by evaluating my accounts &amp; recommending changes in service providers. As someone on a fixed income, I was astounded what they could do! They upgraded my home sound system with new Sonos speakers they set up. Set up my stereo, smart speakers, new wifi, new TVs, and apple TVs. They removed all the old, out of date components. I was trained in the operational tactics, requirements, and capabilities of my new devices. And didn't make a mess! So handsome and charming too!"</p>
+        <div class="review-byline">— Mario (age 78), Palm Springs, CA 01/08/2024</div>
+      </article>
+      <article class="review-card">
+        <p class="review-quote">"I was at my wits' end trying to get all my smart home devices working properly. My stereo system was only playing through half the speakers (when it would turn on), the robot vacuum was still in the box, and the smart faucet had very low water pressure. On top of that, my HomePod, Alexa, and Google speakers all needed updates and connections, the smart thermostat wouldn't sync to my phone, and the new smart TV was a complicated mess. Apple TV would not work either! Even my iPad, iPhone, and their connections to my car audio were giving me issues. There were power cords and clutter everywhere — it was overwhelming! That's when I called GizmoRx. Within a few days, Briar had worked through every single issue systematically. The stereo tuner was repaired, and a new CD changer was installed, and calibrated for full surround sound. The robot vacuum was unboxed, set up, and running around keeping my floors tidy. The smart faucet was adjusted, unclogged, and cleaned for proper pressure. All my voice assistants were updated, linked, and connected to my TV and sound system. The thermostat was finally talking to my mobile device for easy temperature control while away from home. Briar had my smart TV entirely set up — accounts connected, settings configured perfectly for my viewing preferences. He even installed a digital antenna. Even my iPad, iPhone, and their connections to my car's infotainment display were straightened out. Best of all, he organized all the power cables and cleared away the clutter, leaving everything clean and tidy. He got a new power strip and velcro straps to tackle that. And, going above and beyond, helped me save money moving forward by identifying monthly charges for subscriptions I did not know I had. Helped me cancel them, and even helped me request refunds! He was also available for questions via phone afterwards. I'm absolutely amazed at Briar's tech skills and attention to detail. My entire smart home ecosystem is finally working as intended. I'll definitely be calling GizmoRx again for any future issues! Briar's services were worth every penny; in fact, he should charge more!"</p>
+        <div class="review-byline">— Mary Lou (age 70), Mitchell, SD 05/08/2024</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="section-inner">
+    <div class="section-kicker">Pricing</div>
+    <h2 class="section-h2">Clear enough to trust.</h2>
+    <div class="plans-grid">
+
+      <div class="plan-card">
+        <div class="plan-name">Intake &amp; Assessment Consultation</div>
+        <div class="plan-price">$100</div>
+        <div class="plan-cadence">one time payment</div>
+        <div class="plan-features">
+          <div class="plan-feature"><span class="plan-dot"></span><span>Share your vision</span></div>
+          <div class="plan-feature"><span class="plan-dot"></span><span>Present new / old devices</span></div>
+          <div class="plan-feature"><span class="plan-dot"></span><span>Decide goals</span></div>
+          <div class="plan-feature"><span class="plan-dot"></span><span>Define budget</span></div>
+        </div>
+      </div>
+
+      <div class="plan-card">
+        <div class="plan-name">Standard Care Plan</div>
+        <div class="plan-price">$50</div>
+        <div class="plan-cadence">monthly</div>
+        <div class="plan-features">
+          <div class="plan-feature"><span class="plan-dot"></span><span>Four support calls**</span></div>
+          <div class="plan-feature"><span class="plan-dot"></span><span>Response within 72 hours</span></div>
+          <div class="plan-feature"><span class="plan-dot"></span><span>*Plug Club membership</span></div>
+          <div class="plan-feature"><span class="plan-dot"></span><span>5% discount on hourly rate</span></div>
+        </div>
+      </div>
+
+      <div class="plan-card highlight">
+        <div class="plan-name">Premium Plan</div>
+        <div class="plan-price">$80</div>
+        <div class="plan-cadence">monthly</div>
+        <div class="plan-features">
+          <div class="plan-feature"><span class="plan-dot"></span><span>Seven support calls**</span></div>
+          <div class="plan-feature"><span class="plan-dot"></span><span>Response within 48 hours</span></div>
+          <div class="plan-feature"><span class="plan-dot"></span><span>*Plug Club membership</span></div>
+          <div class="plan-feature"><span class="plan-dot"></span><span>7% discount / hour</span></div>
+        </div>
+      </div>
+
+      <div class="plan-card">
+        <div class="plan-name">Hourly</div>
+        <div class="plan-price">$50</div>
+        <div class="plan-cadence">per hour</div>
+        <div class="plan-features">
+          <div class="plan-feature"><span class="plan-dot"></span><span>Flexible single-session support</span></div>
+        </div>
+      </div>
+
+      <div class="plan-card">
+        <div class="plan-name">VIP Plan</div>
+        <div class="plan-price">$100</div>
+        <div class="plan-cadence">yearly</div>
+        <div class="plan-features">
+          <div class="plan-feature"><span class="plan-dot"></span><span>Up to 15 support calls**</span></div>
+          <div class="plan-feature"><span class="plan-dot"></span><span>Response within 24 hours</span></div>
+          <div class="plan-feature"><span class="plan-dot"></span><span>One annual device check-up</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-card">
+        <div class="section-kicker">About GizmoRX</div>
+        <h2 class="section-h2">Built for the modern home; grounded in practical relief.</h2>
+        <p>At GizmoRx, we are dedicated to providing cutting-edge in-home IT solutions for individuals and teams in Palm Springs, CA. With a focus on innovation and customer satisfaction, our team of experts is committed to delivering top-notch technology services tailored to meet your specific needs. Trust GizmoRx to be your partner in navigating the complex world of contemporary technology, so you can focus on what you do best — with ease.</p>
+      </div>
+      <div class="ideal-card">
+        <div class="ideal-label">Ideal for</div>
+        <div class="ideal-grid">
+          <div class="ideal-item">Smart-home troubleshooting</div>
+          <div class="ideal-item">Device setup and migration</div>
+          <div class="ideal-item">TV / streaming / speaker integration</div>
+          <div class="ideal-item">App and account cleanup</div>
+          <div class="ideal-item">Monthly subscription optimization</div>
+          <div class="ideal-item">Practical digital training</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-inner">
+    <div class="contact-wrap">
+      <div class="contact-grid">
+        <div>
+          <div class="section-kicker">Contact</div>
+          <h2 class="section-h2">Get the remedy started.</h2>
+          <p class="contact-text">Share the issue, the devices involved, and whether you want an in-home visit, setup help, or a system-wide cleanup.</p>
+        </div>
+        <div class="contact-info-card">
+          <div class="row">
+            <div class="ci-label">Call</div>
+            <div class="ci-value"><a href="tel:+14247773476" style="color:inherit;text-decoration:none;">+1-424-777-3476</a></div>
+          </div>
+          <div class="row">
+            <div class="ci-label">Email</div>
+            <div class="ci-value"><a href="mailto:gizmorxps@outlook.com" style="color:inherit;text-decoration:none;">gizmorxps@outlook.com</a></div>
+          </div>
+          <div class="row">
+            <div class="ci-label">Location</div>
+            <div class="ci-value">Palm Springs, CA</div>
+          </div>
+          <div class="row">
+            <div class="ci-label">Hours</div>
+            <div class="ci-value">7 days a week</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <strong>GizmoRX</strong> &nbsp;·&nbsp; House calls for your sick tech &nbsp;·&nbsp; Palm Springs, CA &nbsp;·&nbsp; <a href="tel:+14247773476" style="color:inherit;">+1-424-777-3476</a>
+</footer>
+
+</body>
+</html>
