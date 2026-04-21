@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <div class="logo-wrap">
+  <img
+    src="0B028336-16A0-44D5-AF4C-BCF49EC49073_4_5005_c.jpeg"
+    alt="GizmoRX logo"
+    class="gizmorx-logo"
+  />
+</div>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GizmoRX — House calls for your sick tech</title>
@@ -10,7 +17,35 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,900;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+<style>
+  .logo-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 1.5rem auto;
+    padding-top: 1.25rem;
+  }
 
+  .gizmorx-logo {
+    display: block;
+    max-width: 420px;
+    width: min(80vw, 420px);
+    height: auto;
+    object-fit: contain;
+  }
+
+  @media (max-width: 640px) {
+    .logo-wrap {
+      margin-bottom: 1rem;
+      padding-top: 0.75rem;
+    }
+
+    .gizmorx-logo {
+      width: min(88vw, 320px);
+    }
+  }
+</style>
     :root {
       --stone-50:  #fafaf9;
       --stone-100: #f5f5f4;
